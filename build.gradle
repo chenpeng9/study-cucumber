@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group 'com.cp'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+project.ext {
+    cucumberVersion = '3.0.2'
+    cucumberProVersion = '2.0.4'
+    junitVersion = '4.12'
+    seleniumVersion = '3.14.0'
+}
+
+dependencies {
+    compile 'io.cucumber:cucumber-java:' + cucumberVersion
+    compile 'io.cucumber:cucumber-junit:' + cucumberVersion
+    compile 'io.cucumber:pro-plugin:' + cucumberProVersion
+    compile 'junit:junit:' + junitVersion
+    compile 'org.seleniumhq.selenium:selenium-java:' + seleniumVersion
+}
